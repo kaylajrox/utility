@@ -11,7 +11,7 @@ def conductance_tube(v,A,a=1):
     :param v: avg velocity of the gas, calculated using func in other file
     :param A: cross sectional area that the gas passes through
     :param a: transmission probability through the tube, default is the result for the long tube and all particles go through
-    :return C: conductance of the system
+    :return C: conductance of the system in L/s
     """
     C = a*(v*A)/4
     return C
