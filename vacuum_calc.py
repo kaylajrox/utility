@@ -5,7 +5,10 @@ purely geometrical quantity that does not depend on pressure, but rather the typ
 
 """
 # TODO: make a database of all the atomic masses of the periodic table
-def conductance_tube(v,A,a=1):
+
+import numpy as np
+
+def conductance_aperture(v,A,a=1):
     """
 
     :param v: avg velocity of the gas, calculated using func in other file
@@ -14,4 +17,15 @@ def conductance_tube(v,A,a=1):
     :return C: conductance of the system in L/s
     """
     C = a*(v*A)/4
-    return C
+    return C*1000
+
+def conductance_circular_tube(v,d,l):
+    """
+    Conductance of a circular rounded tube calcuations
+    :param v: avg boltzmann velocity of a particle
+    :param d: diameter of the pipe
+    :param l: length of the pipe
+    :return: C_tube is conductance of the tube in L/s (multiply by 1000 for L)
+    """
+    C_tube = (np.pi)*v*d**3/(12*l)
+    return C_tube*1000

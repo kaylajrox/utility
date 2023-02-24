@@ -24,7 +24,7 @@ def convert_celsius_to_kelvin(T_C):
     """
     T_K = T_C + 273.15
     return T_K
-def avg_boltzmann_velocity(m_atomic,T_C=22):
+def avg_boltzmann_velocity(m_atomic,T_C=25):
     """
 
     :param m_atomic: atomic mass of the given substance
@@ -37,7 +37,7 @@ def avg_boltzmann_velocity(m_atomic,T_C=22):
     return v_avg
 
 
-def rms_boltzmann_velocity(m_atomic,T_C=22):
+def rms_boltzmann_velocity(m_atomic,T_C=25):
     """
 
     :param m_atomic: atomic mass of the given substance
@@ -48,4 +48,10 @@ def rms_boltzmann_velocity(m_atomic,T_C=22):
     m_kg = convert_atomic_mass_kg(m_atomic)
     v_rms = np.sqrt(3*kB*T/(pi*m_kg))
     return v_rms
+
+def volumetric_flow_rate(m_atomic,T_C=25):
+    T = convert_celsius_to_kelvin(T_C)
+    S = 1.455e4*np.sqrt(T/m_atomic)
+    return S
+
 
