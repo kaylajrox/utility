@@ -9,11 +9,11 @@ purely geometrical quantity that does not depend on pressure, but rather the typ
 import numpy as np
 
 def conductance_short_circular_tube(v,A,a=1):
-    """
-    The conductance for a short tube is equivalent to the conductance of an aperature when a=1
+    """ The conductance for a short circular tube is equivalent to the conductance of an aperature when a=1
     :param v: avg velocity of the gas, calculated using func in other file
     :param A: cross-sectional area that the gas passes through
-    :param a: transmission probability through the tube, default is the result for the long tube and all particles go through
+    :param a: transmission probability through the tube, default is the result for the long tube and all particles go
+    through
     :return C: conductance of the system in L/s
     """
     C = a*(v*A)/4
@@ -21,7 +21,7 @@ def conductance_short_circular_tube(v,A,a=1):
 
 def conductance_long_circular_tube(v,d,l):
     """
-    Conductance of a circular rounded tube calcuations
+    Conductance of a long circular rounded tube calcuations
     :param v: avg boltzmann velocity of a particle
     :param d: diameter of the pipe
     :param l: length of the pipe
