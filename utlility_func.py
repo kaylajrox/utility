@@ -1,6 +1,6 @@
 import numpy as np
 
-def find_nearest_idx(self, array, value):
+def find_nearest_idx(array, value):
     """
     Similar to where or argwhere in numpy. Given a value, find the index of an element in an array closest to given value.
     --------

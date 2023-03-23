@@ -1,6 +1,4 @@
 import pandas as pd
-import numpy as np
-from utlility_func import find_nearest_idx
 import matplotlib.pyplot as plt
 
 # table 3.1 pg 36 in A User's Guide to Vacuum Technology
